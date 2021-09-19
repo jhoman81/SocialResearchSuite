@@ -16,8 +16,11 @@ namespace SRS.EntityFramework
 
         public SRSDbContext()
         {
-            var folder = Environment.SpecialFolder.LocalApplicationData;
-            var path = Environment.GetFolderPath(folder);
+            string folder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            string path = Path.Combine(folder, "SocialResearchSuite");
+
+            Directory.CreateDirectory(path); // Create directory if it doesnt exist
+
             DbPath = $"{path}{System.IO.Path.DirectorySeparatorChar}srsdata.db";
         }
 
