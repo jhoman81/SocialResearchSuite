@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRS.Domain", "SRS.Domain\SRS.Domain.csproj", "{338DEEDA-0B24-4FBC-9B03-393C7FF6E9FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SRS.EntityFramework", "SRS.EntityFramework\SRS.EntityFramework.csproj", "{631B14F7-1A91-4A25-A7DC-D0DC6C2FCE5E}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{338DEEDA-0B24-4FBC-9B03-393C7FF6E9FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{338DEEDA-0B24-4FBC-9B03-393C7FF6E9FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{338DEEDA-0B24-4FBC-9B03-393C7FF6E9FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{338DEEDA-0B24-4FBC-9B03-393C7FF6E9FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{631B14F7-1A91-4A25-A7DC-D0DC6C2FCE5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{631B14F7-1A91-4A25-A7DC-D0DC6C2FCE5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{631B14F7-1A91-4A25-A7DC-D0DC6C2FCE5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{631B14F7-1A91-4A25-A7DC-D0DC6C2FCE5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
