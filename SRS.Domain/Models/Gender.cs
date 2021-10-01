@@ -15,4 +15,4 @@ namespace SRS.Domain.Models
         Other
     };
 }
-}
+

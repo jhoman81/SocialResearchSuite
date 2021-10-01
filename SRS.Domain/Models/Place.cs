@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SRS.Domain.Models
 {
-    internal class Place
+    public class Place
     {
         public int ID { get; set; }
         public string Name { get; set; }

@@ -14,7 +14,7 @@ namespace SRS.Domain.Models
         public string Description { get; set; }
         public DateTime BeginDate { get; set; }
         public DateTime EndDate { get; set; }
-        public IEnumerable<Place> Places { get; set; }
+        public IEnumerable<Place>? Places { get; set; }
         public IEnumerable<Note> Notes { get; set; }
         public IEnumerable<Reference> References { get; set; }
         public IEnumerable<Person> Participants { get; set; }
