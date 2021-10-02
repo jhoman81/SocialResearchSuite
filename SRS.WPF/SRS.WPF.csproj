@@ -12,8 +12,4 @@
     <ProjectReference Include="..\SRS.EntityFramework\SRS.EntityFramework.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
-
 </Project>

@@ -1,4 +1,5 @@
 ﻿using SRS.WPF.Commands;
+using SRS.WPF.Models;
 using SRS.WPF.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,7 @@ using System.Windows.Input;
 
 namespace SRS.WPF.State.Navigators
 {
-    public class Navigator : INavigator, INotifyPropertyChanged
+    public class Navigator : ObservableObject, INavigator
     {        
         public ViewModelBase _currentViewModel;
         public ViewModelBase CurrentViewModel
@@ -28,11 +29,6 @@ namespace SRS.WPF.State.Navigators
 
         public ICommand UpdateCurrentViewModelCommand => new UpdateCurrentViewModelCommand(this);
 
-        public event PropertyChangedEventHandler? PropertyChanged;
-        
-        protected void OnPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+
     }
 }
