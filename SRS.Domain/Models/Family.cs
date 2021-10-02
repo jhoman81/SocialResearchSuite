@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SRS.Domain.Models
 {
-    public class Family
+    public class Family : DomainObject
     {
-        public int Id {  get; set; }    
+        public IEnumerable<Person>? People { get; set; }
     }
 }

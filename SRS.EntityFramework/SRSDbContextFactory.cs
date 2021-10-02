@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace SRS.EntityFramework
 {
-    class SRSDbContextOptionsFactory : IDesignTimeDbContextFactory<SRSDbContext>
+    public class SRSDbContextFactory : IDesignTimeDbContextFactory<SRSDbContext>
     {
-        public SRSDbContext CreateDbContext(string[] args)
+        public SRSDbContext CreateDbContext(string[] args = null)
         {
             var options = new DbContextOptionsBuilder<SRSDbContext>();
             

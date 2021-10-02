@@ -9,8 +9,8 @@ using SRS.EntityFramework;
 namespace SRS.EntityFramework.Migrations
 {
     [DbContext(typeof(SRSDbContext))]
-    [Migration("20211001225031_initial")]
-    partial class initial
+    [Migration("20211002171913_initialcreate")]
+    partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -55,18 +55,18 @@ namespace SRS.EntityFramework.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("FirstName")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Password")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Surname")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Username")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

@@ -1,4 +1,7 @@
-﻿using SRS.Domain.Services;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using SRS.Domain.Models;
+using SRS.Domain.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,31 +10,69 @@ using System.Threading.Tasks;
 
 namespace SRS.EntityFramework.Services
 {
-    public class GenericDataService<T> : IDataService<T>
+    public class GenericDataService<T> : IDataService<T> where T : DomainObject
     {
-        public Task<T> Create(T entity)
+        private readonly SRSDbContextFactory _contextFactory;
+
+        public GenericDataService(SRSDbContextFactory contextFactory)
         {
-            throw new NotImplementedException();
+            _contextFactory = contextFactory;
         }
 
-        public Task<bool> Delete(int id)
+        public async Task<T> Create(T entity)
         {
-            throw new NotImplementedException();
+            using (SRSDbContext context = _contextFactory.CreateDbContext())
+            {
+                EntityEntry<T> createdResult = await context.Set<T>().AddAsync(entity);
+                await context.SaveChangesAsync();
+
+                return createdResult.Entity;
+            }
         }
 
-        public Task<T> Get(int id)
+        public async Task<bool> Delete(int id)
         {
-            throw new NotImplementedException();
+            using (SRSDbContext context = _contextFactory.CreateDbContext())
+            {
+                T entity = await context.Set<T>().FirstOrDefaultAsync((e) => e.Id == id);
+                context.Set<T>().Remove(entity);
+                await context.SaveChangesAsync();
+
+                return true;
+            }
         }
 
-        public Task<IEnumerable<T>> GetAll()
+        public async Task<T> Get(int id)
         {
-            throw new NotImplementedException();
+            using (SRSDbContext context = _contextFactory.CreateDbContext())
+            {
+                T entity = await context.Set<T>().FirstOrDefaultAsync((e) => e.Id == id);
+                
+                return entity;
+            }
         }
 
-        public Task<T> Update(int id, T entity)
+        public async Task<IEnumerable<T>> GetAll()
         {
-            throw new NotImplementedException();
+            using (SRSDbContext context = _contextFactory.CreateDbContext())
+            {
+                IEnumerable<T> entities = await context.Set<T>().ToListAsync();
+
+                return entities;
+            }
+        }
+
+        public async Task<T> Update(int id, T entity)
+        {
+            using (SRSDbContext context = _contextFactory.CreateDbContext())
+            {
+                entity.Id = id;
+                context.Set<T>().Update(entity);
+
+                await context.SaveChangesAsync();
+
+                return entity;
+            }
         }
     }
 }

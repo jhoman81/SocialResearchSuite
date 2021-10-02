@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace SRS.Domain.Models
 {
-    public class User
+    public class User : DomainObject
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string Surname {  get; set; }
-        public string Email {  get; set; }
-        public string Password {  get; set; }
-        public IEnumerable<Project> Projects {  get; set; } // List of projects that are associated with this user
+        public string? FirstName { get; set; }
+        public string Username { get; set; }
+        public string? Surname {  get; set; }
+        public string? Email {  get; set; }
+        public string? Password {  get; set; }
+        public IEnumerable<Project>? Projects {  get; set; } // List of projects that are associated with this user
     }
 }
