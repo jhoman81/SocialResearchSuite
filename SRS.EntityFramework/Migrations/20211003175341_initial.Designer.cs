@@ -9,7 +9,7 @@ using SRS.EntityFramework;
 namespace SRS.EntityFramework.Migrations
 {
     [DbContext(typeof(SRSDbContext))]
-    [Migration("20211002195115_initial")]
+    [Migration("20211003175341_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
