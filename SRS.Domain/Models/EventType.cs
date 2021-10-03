@@ -45,11 +45,11 @@ namespace SRS.Domain.Models
         [Display(Name = "First Communion")]
         FirstCommunion,     // A first communion event.
         [Display(Name = "Focus Group")]
-        FocusGroup,
+        FocusGroup,         // A focus group event.
         Funeral,            // A funeral event.
         Healing,            // A healing event. ***
         Immigration,        // An immigration event.
-        Interview,
+        Interview,          // An interview event.
         [Display(Name = "Land Transaction")]
         LandTransaction,    // A land transaction event.
         Marriage,           // A marriage event.
