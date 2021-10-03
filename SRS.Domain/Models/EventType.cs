@@ -44,9 +44,12 @@ namespace SRS.Domain.Models
         Excommunication,    // An excommunication event from a church.
         [Display(Name = "First Communion")]
         FirstCommunion,     // A first communion event.
+        [Display(Name = "Focus Group")]
+        FocusGroup,
         Funeral,            // A funeral event.
         Healing,            // A healing event. ***
         Immigration,        // An immigration event.
+        Interview,
         [Display(Name = "Land Transaction")]
         LandTransaction,    // A land transaction event.
         Marriage,           // A marriage event.
