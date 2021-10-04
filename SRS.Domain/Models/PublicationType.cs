@@ -68,6 +68,7 @@ namespace SRS.Domain.Models
         [Display(Name = "Web Page")]
         WebPage,
         [Display(Name = "Working Paper")]
-        WorkingPaper
+        WorkingPaper,
+        Unspecified
     };
 }
