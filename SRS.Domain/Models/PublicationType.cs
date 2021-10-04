@@ -31,6 +31,7 @@ namespace SRS.Domain.Models
         Email,
         [Display(Name = "Encyclopedia Article")]
         EncyclopediaArticle,
+        Exhibit,
         Film,
         [Display(Name = "Field Note")]
         FieldNote,
