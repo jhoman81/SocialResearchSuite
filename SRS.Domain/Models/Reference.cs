@@ -13,9 +13,9 @@ namespace SRS.Domain.Models
         public string? Description { get; set; }
         public DateTime? DateAdded { get; set; }
         public DateTime? DateLastModified { get; set; }
-        public String[]? Authors { get; set; }
+        public IEnumerable<Author>? Authors { get; set; }
         public string? PublicationTitle { get; set; }
-        public String[]? Editors { get; set; }
+        public IEnumerable<Author>? Editors { get; set; }
         public string? Pages { get; set; }
         public string? Publisher { get; set; }
         public string? PublisherLocation { get; set; }
