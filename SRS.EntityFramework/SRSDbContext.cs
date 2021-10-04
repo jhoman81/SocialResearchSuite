@@ -19,7 +19,7 @@ namespace SRS.EntityFramework
         public DbSet<Family> Families {  get; set; }
         public DbSet<Household> Households { get; set; }
         public DbSet<Media> Media {  get; set; }
-        public DbSet<Note> Notes { get; set }
+        public DbSet<Note> Notes { get; set; }
         public DbSet<Person> People { get; set; }
         public DbSet<Place> Places { get; set; }
         public DbSet<Reference> References {  get; set; }   
