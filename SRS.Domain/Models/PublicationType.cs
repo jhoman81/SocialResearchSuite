@@ -51,6 +51,7 @@ namespace SRS.Domain.Models
         [Display(Name = "Newspaper Article")]
         NewspaperArticle,
         Patent,
+        Photograph,
         Podcast,
         Presentation,
         [Display(Name = "Radio Broadcast")]
