@@ -12,6 +12,7 @@ namespace SRS.EntityFramework
     {
         public SRSDbContext CreateDbContext(string[] args = null)
         {
+            // ToDo: Add DbContext information for creating and migrating SQL database
             var options = new DbContextOptionsBuilder<SRSDbContext>();
             
             string folder = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);

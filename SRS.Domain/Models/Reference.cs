@@ -13,14 +13,13 @@ namespace SRS.Domain.Models
         public string? Description { get; set; }
         public DateTime? DateAdded { get; set; }
         public DateTime? DateLastModified { get; set; }
-        // list of authors
+        public String[]? Authors { get; set; }
         public string? PublicationTitle { get; set; }
-        // list of editors
+        public String[]? Editors { get; set; }
         public string? Pages { get; set; }
         public string? Publisher { get; set; }
         public string? PublisherLocation { get; set; }
-        // type of publication or reference
-        // list of linked docs
+        public PublicationType? PubType { get; set; }
         public Media? ReferenceFile { get; set; }
         public IEnumerable<Note>? Notes { get; set; }    
     }

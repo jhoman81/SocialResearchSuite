@@ -8,6 +8,8 @@ namespace SRS.Domain.Models
 {
     public class Family : DomainObject
     {
-        public IEnumerable<Person>? People { get; set; }
+        public IEnumerable<Person>? Kids { get; set; }
+        public int? ParentOne { get; set; }
+        public int? ParentTwo { get; set; }
     }
 }
