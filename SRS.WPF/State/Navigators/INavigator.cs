@@ -11,7 +11,10 @@ namespace SRS.WPF.State.Navigators
     public enum ViewType
     {
         Home,
-        Participants
+        Participants,
+        Events,
+        Notes,
+        Places
     }
     public interface INavigator
     {

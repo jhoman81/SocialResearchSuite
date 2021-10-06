@@ -37,6 +37,15 @@ namespace SRS.WPF.Commands
                     case ViewType.Participants:
                         _navigator.CurrentViewModel = new ParticipantsViewModel();
                         break;
+                    case ViewType.Events:
+                        _navigator.CurrentViewModel = new EventsViewModel();
+                        break;
+                    case ViewType.Notes:
+                        _navigator.CurrentViewModel = new NotesViewModel();
+                        break;
+                    case ViewType.Places:
+                        _navigator.CurrentViewModel = new PlacesViewModel();
+                        break;
                     default:
                         break;
                 }
