@@ -10,6 +10,7 @@ namespace SRS.Domain.Models
     [NotMapped]
     public class LanguageJSON
     {
+        [NotMapped]
         public class Rootobject
         {
             public string type { get; set; }
@@ -17,11 +18,13 @@ namespace SRS.Domain.Models
             public Feature[] features { get; set; }
         }
 
+        [NotMapped]
         public class Properties
         {
             public string layer { get; set; }
         }
 
+        [NotMapped]
         public class Feature
         {
             public string type { get; set; }
@@ -30,6 +33,7 @@ namespace SRS.Domain.Models
             public string id { get; set; }
         }
 
+        [NotMapped]
         public class Properties1
         {
             public Language language { get; set; }
@@ -37,6 +41,7 @@ namespace SRS.Domain.Models
             public string name { get; set; }
         }
 
+        [NotMapped]
         public class Language
         {
             public int pk { get; set; }
@@ -60,6 +65,7 @@ namespace SRS.Domain.Models
             public float longitude { get; set; }
         }
 
+        [NotMapped]
         public class Jsondata
         {
             public Iso_Retirement iso_retirement { get; set; }
@@ -69,6 +75,7 @@ namespace SRS.Domain.Models
             public bool _new { get; set; }
         }
 
+        [NotMapped]
         public class Iso_Retirement
         {
             public string code { get; set; }
@@ -81,6 +88,7 @@ namespace SRS.Domain.Models
             public string comment { get; set; }
         }
 
+        [NotMapped]
         public class Ethnologue_Comment
         {
             public string isohid { get; set; }
@@ -89,12 +97,14 @@ namespace SRS.Domain.Models
             public string comment { get; set; }
         }
 
+        [NotMapped]
         public class Link
         {
             public string url { get; set; }
             public string label { get; set; }
         }
 
+        [NotMapped]
         public class Geometry
         {
             public string type { get; set; }
