@@ -11,6 +11,7 @@ namespace SRS.EntityFramework
 {
     public class SRSDbContext : DbContext
     {
+        // All database tables
         public DbSet<User> Users {  get; set; }
         public DbSet<Project> Projects {  get; set; }
         public DbSet<Community> Communities { get; set; }
